@@ -1,0 +1,293 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Software Testing  - II - eYFi-Mega Software Beta-Testing Program</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Website for eYFi-Mega SW Beta-Testing">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="0-1-Welcome.html"><strong aria-hidden="true">1.</strong> Welcome</a></li><li class="chapter-item expanded "><a href="0-2-Announcements.html"><strong aria-hidden="true">2.</strong> Announcements</a></li><li class="chapter-item expanded "><a href="1-Software_Testing-I.html"><strong aria-hidden="true">3.</strong> Software Testing - I</a></li><li class="chapter-item expanded "><a href="2-Software_Testing-II.html" class="active"><strong aria-hidden="true">4.</strong> Software Testing  - II</a></li><li class="chapter-item expanded "><a href="3-Software_Testing-III.html"><strong aria-hidden="true">5.</strong> Software_Testing - III</a></li><li class="chapter-item expanded "><a href="4-Software_Testing-IV.html"><strong aria-hidden="true">6.</strong> Software_Testing - IV</a></li><li class="chapter-item expanded "><a href="5-Software_Testing-V.html"><strong aria-hidden="true">7.</strong> Software_Testing - V</a></li><li class="chapter-item expanded "><a href="6-Version_Control-I.html"><strong aria-hidden="true">8.</strong> Version_Control - I</a></li><li class="chapter-item expanded "><a href="7-Version_Control-II.html"><strong aria-hidden="true">9.</strong> Version_Control - II</a></li><li class="chapter-item expanded "><a href="8-Version_Control-III.html"><strong aria-hidden="true">10.</strong> Version_Control - III</a></li><li class="chapter-item expanded "><a href="9-Software_Versioning-I.html"><strong aria-hidden="true">11.</strong> Software_Versioning - I</a></li><li class="chapter-item expanded "><a href="10-Software_Versioning-II.html"><strong aria-hidden="true">12.</strong> Software Versioning - II</a></li><li class="chapter-item expanded "><a href="11-Beta_Testing_1.html"><strong aria-hidden="true">13.</strong> Beta-Testing 1 - Arduino IDE</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">eYFi-Mega Software Beta-Testing Program</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#types-of-software-testing" id="types-of-software-testing">Types of Software Testing</a></h1>
+<p><strong>Author:</strong> Kritka, GeeksforGeeks</p>
+<h3><a class="header" href="#introduction" id="introduction">Introduction</a></h3>
+<p>Testing is a process of executing a program with the aim of finding error. To make our software perform well it should be error free. If testing is done successfully it will remove all the errors from the software.</p>
+<h3><a class="header" href="#principles-of-testing" id="principles-of-testing">Principles of Testing</a></h3>
+<p>(i) All the test should meet the customer requirements </p>
+<p>(ii) To make our software testing should be performed by third party </p>
+<p>(iii) Exhaustive testing is not possible. As we need the optimal amount of testing based on the risk assessment of the application. (iv) All the test to be conducted should be planned before implementing it </p>
+<p>v) It follows pareto rule(80/20 rule) which states that 80% of errors comes from 20% of program components. </p>
+<p>(vi) Start testing with small parts and extend it to large parts.</p>
+<h3><a class="header" href="#types-of-testing" id="types-of-testing">Types of Testing</a></h3>
+<h3><a class="header" href="#1-unit-testing" id="1-unit-testing">1. Unit Testing</a></h3>
+<p>It focuses on smallest unit of software design. In this we test an individual unit or group of inter related <a href="http://units.It">units.It</a> is often done by programmer by using sample input and observing its corresponding outputs. Example:</p>
+<pre><code>a) In a program we are checking if loop, method or 
+   function is working fine
+b) Misunderstood or incorrect, arithmetic precedence.
+c) Incorrect initialization
+</code></pre>
+<h3><a class="header" href="#2-integration-testing" id="2-integration-testing">2. Integration Testing</a></h3>
+<p>The objective is to take unit tested components and build a program structure that has been dictated by design.Integration testing is testing in which a group of components are combined to produce output.</p>
+<p>Integration testing is of four types: (i) Top down (ii) Bottom up (iii) Sandwich (iv) Big-Bang Example</p>
+<pre><code>(a) Black Box testing:- It is used for validation. 
+In this we ignores internal working mechanism and 
+focuses on what is the output?.
+
+(b) White Box testing:- It is used for verification. 
+In this we focus on internal mechanism i.e.
+how the output is achieved?
+</code></pre>
+<h3><a class="header" href="#3-regression-testing" id="3-regression-testing">3. Regression Testing</a></h3>
+<p>Every time new module is added leads to changes in program. This type of testing make sure that whole component works properly even after adding components to the complete program. Example</p>
+<pre><code>In school record suppose we have module staff, students 
+and finance combining these modules and checking if on 
+integration these module works fine is regression testing
+</code></pre>
+<h3><a class="header" href="#4-smoke-testing" id="4-smoke-testing">4. Smoke Testing</a></h3>
+<p>This test is done to make sure that software under testing is ready or stable for further testing It is called smoke test as testing initial pass is done to check if it did not catch the fire or smoked in the initial switch on. Example:</p>
+<pre><code>If project has 2 modules so before going to module 
+make sure that module 1 works properly
+</code></pre>
+<h3><a class="header" href="#5-alpha-testing" id="5-alpha-testing">5. Alpha Testing</a></h3>
+<p>This is a type of validation testing. It is a type of  <em>acceptance testing</em> which is done before the product is released to customers. It is typically done by QA people. Example:</p>
+<pre><code>When software testing is performed internally within
+the organization
+</code></pre>
+<h3><a class="header" href="#6-beta-testing" id="6-beta-testing">6. Beta Testing</a></h3>
+<p>The beta test is conducted at one or more customer sites by the end-user of the software. This version is released for the limited number of users for testing in real time environment Example:</p>
+<pre><code>When software testing is performed for the limited
+number of people
+</code></pre>
+<h3><a class="header" href="#7-system-testing" id="7-system-testing">7. System Testing</a></h3>
+<p>In this software is tested such that it works fine for different operating system. It is covered under the black box testing technique. In this we just focus on required input and output without focusing on internal working. In this we have security testing, recovery testing , stress testing and performance testing Example:</p>
+<pre><code>This include functional as well as non functional 
+testing
+</code></pre>
+<h3><a class="header" href="#8-stress-testing" id="8-stress-testing">8. Stress Testing</a></h3>
+<p>In this we gives unfavorable conditions to the system and check how they perform in those condition. Example:</p>
+<pre><code>(a) Test cases that require maximum memory or other
+    resources are executed
+(b) Test cases that may cause thrashing in a virtual 
+    operating system
+(c) Test cases that may cause excessive disk requirement
+</code></pre>
+<h3><a class="header" href="#9-performance-testing" id="9-performance-testing">9. Performance Testing</a></h3>
+<p>It is designed to test the run-time performance of software within the context of an integrated system. It is used to test speed and effectiveness of program. Example:</p>
+<pre><code>Checking number of processor cycles.
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="1-Software_Testing-I.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="3-Software_Testing-III.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="1-Software_Testing-I.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="3-Software_Testing-III.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

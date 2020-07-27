@@ -1,0 +1,419 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Version_Control - III - eYFi-Mega Software Beta-Testing Program</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Website for eYFi-Mega SW Beta-Testing">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="0-1-Welcome.html"><strong aria-hidden="true">1.</strong> Welcome</a></li><li class="chapter-item expanded "><a href="0-2-Announcements.html"><strong aria-hidden="true">2.</strong> Announcements</a></li><li class="chapter-item expanded "><a href="1-Software_Testing-I.html"><strong aria-hidden="true">3.</strong> Software Testing - I</a></li><li class="chapter-item expanded "><a href="2-Software_Testing-II.html"><strong aria-hidden="true">4.</strong> Software Testing  - II</a></li><li class="chapter-item expanded "><a href="3-Software_Testing-III.html"><strong aria-hidden="true">5.</strong> Software_Testing - III</a></li><li class="chapter-item expanded "><a href="4-Software_Testing-IV.html"><strong aria-hidden="true">6.</strong> Software_Testing - IV</a></li><li class="chapter-item expanded "><a href="5-Software_Testing-V.html"><strong aria-hidden="true">7.</strong> Software_Testing - V</a></li><li class="chapter-item expanded "><a href="6-Version_Control-I.html"><strong aria-hidden="true">8.</strong> Version_Control - I</a></li><li class="chapter-item expanded "><a href="7-Version_Control-II.html"><strong aria-hidden="true">9.</strong> Version_Control - II</a></li><li class="chapter-item expanded "><a href="8-Version_Control-III.html" class="active"><strong aria-hidden="true">10.</strong> Version_Control - III</a></li><li class="chapter-item expanded "><a href="9-Software_Versioning-I.html"><strong aria-hidden="true">11.</strong> Software_Versioning - I</a></li><li class="chapter-item expanded "><a href="10-Software_Versioning-II.html"><strong aria-hidden="true">12.</strong> Software Versioning - II</a></li><li class="chapter-item expanded "><a href="11-Beta_Testing_1.html"><strong aria-hidden="true">13.</strong> Beta-Testing 1 - Arduino IDE</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">eYFi-Mega Software Beta-Testing Program</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#aha-moments-when-learning-git" id="aha-moments-when-learning-git">Aha! Moments When Learning Git</a></h1>
+<p><strong>Author:</strong> <a href="https://betterexplained.com/articles/a-visual-guide-to-version-control/">BetterExplained</a></p>
+<p>Git is a fast, flexible but challenging distributed version control system. Before jumping in:</p>
+<ul>
+<li><a href="https://betterexplained.com/articles/a-visual-guide-to-version-control/">Understand regular version control</a></li>
+<li><a href="https://betterexplained.com/articles/intro-to-distributed-version-control-illustrated/">Understand distributed version control</a></li>
+</ul>
+<p>Along with a <a href="http://progit.org/book/">book</a>, <a href="http://www.eecs.harvard.edu/%7Ecduan/technical/git/">tutorial</a> and <a href="http://jonas.nitro.dk/git/quick-reference.html">cheatsheet</a>, here are the insights that helped git click.</p>
+<h2><a class="header" href="#theres-a-staging-area" id="theres-a-staging-area">There's A Staging Area!</a></h2>
+<p>Git has a staging area. <strong>Git has a staging area!!!</strong></p>
+<p>Yowza, did this ever confuse me. There's both a repo (&quot;object database&quot;) and a staging area (called &quot;index&quot;). Checkins have two steps:</p>
+<ul>
+<li>
+<pre><code>git add foo.txt
+</code></pre>
+<ul>
+<li>Add foo.txt to the index. It's not checked in yet!</li>
+</ul>
+</li>
+<li>
+<pre><code>git commit -m &quot;message&quot;
+</code></pre>
+<ul>
+<li>Put staged files in the repo; they're now tracked</li>
+<li>You can &quot;<code>git add --update&quot;</code> to stage all tracked, modified files</li>
+</ul>
+</li>
+</ul>
+<p><strong>Why stage?</strong> Git's flexible: if a, b and c are changed, you can commit them separately or together.</p>
+<p>But now there's two undos:</p>
+<ul>
+<li>
+<pre><code>git checkout foo.txt
+</code></pre>
+<ul>
+<li>Undo local changes (like svn revert)</li>
+</ul>
+</li>
+<li>
+<pre><code>git reset HEAD foo.txt
+</code></pre>
+<ul>
+<li>Remove from staging area (local copy still modified).</li>
+</ul>
+</li>
+</ul>
+<p>Add and commit, add and commit -- Git has a rhythm.</p>
+<h2><a class="header" href="#branching-is-save-as" id="branching-is-save-as">Branching Is &quot;Save As...&quot;</a></h2>
+<p>Branches are like &quot;Save as...&quot; on a directory. Best of all:</p>
+<ul>
+<li>Easily merge changes with the original (changes tracked and never applied twice)</li>
+<li>No wasted space (common files only stored once)</li>
+</ul>
+<p><strong>Why branch?</strong> Consider the utility of &quot;Save as...&quot; for regular files: you tinker with multiple possibilities while keeping the original safe. Git enables this for directories, with the power to merge. (In practice, svn is like a single shared drive, where you can only revert to one backup).</p>
+<h2><a class="header" href="#imagine-virtual-directories" id="imagine-virtual-directories">Imagine Virtual Directories</a></h2>
+<p>I see branches as &quot;virtual directories&quot; in the .git folder. While inside a physical directory (c:\project or ~/project), you traverse virtual directories with a checkout.</p>
+<ul>
+<li>
+<pre><code>git checkout master
+</code></pre>
+<ul>
+<li>switch to master branch (&quot;cd master&quot;)</li>
+</ul>
+</li>
+<li>
+<pre><code>git branch dev
+</code></pre>
+<ul>
+<li>create new branch from existing (&quot;cp * dev&quot;)</li>
+<li>you still need to &quot;cd&quot; with &quot;git checkout dev&quot;</li>
+</ul>
+</li>
+<li>
+<pre><code>git merge dev
+</code></pre>
+<ul>
+<li>(when in master) pull in changes from dev (&quot;cp dev/* .&quot;)</li>
+</ul>
+</li>
+<li>
+<pre><code>git branch
+</code></pre>
+<ul>
+<li>list all branches (&quot;ls&quot;)</li>
+</ul>
+</li>
+</ul>
+<p>My inner dialogue is &quot;change to dev directory (checkout)... make changes... save changes (add/commit)... change to master directory... copy in changes from dev (merge)&quot;.</p>
+<p>The physical directory is a scratchpad. Virtual directories are affected by git commands:</p>
+<ul>
+<li>
+<pre><code>rm foo.txt
+</code></pre>
+<ul>
+<li>Remove foo.txt from your sandbox (restored if you checkout the branch again)</li>
+</ul>
+</li>
+<li>
+<pre><code>git rm foo.txt
+</code></pre>
+<ul>
+<li>Remove foo.txt from current virtual directory</li>
+<li>Gotcha: you need to commit that change!</li>
+</ul>
+</li>
+</ul>
+<h2><a class="header" href="#know-the-current-branch" id="know-the-current-branch">Know The Current Branch</a></h2>
+<p>Just like seeing your current directory, <strong>put the current branch in your prompt!</strong></p>
+<p><img src="https://betterexplained.com/wp-content/uploads/git/git_prompt.png" alt="git branch highlighting" /></p>
+<p>In my .bash_profile:</p>
+<pre><code>parse_git_branch() {
+    git branch 2&gt; /dev/null | sed -e '/^[^*]/d' -e 's/* (.*)/(1)/'
+}
+
+export PS1=&quot;[33[00m]u@h[33[01;34m] W [33[31m]$(parse_git_branch) [33[00m]$[33[00m] &quot;
+</code></pre>
+<h2><a class="header" href="#visualize-your-branch-structure" id="visualize-your-branch-structure">Visualize Your Branch Structure</a></h2>
+<p>Git leaves branch organization to you. Nvie.com has a <a href="http://nvie.com/git-model">great branch strategy</a>:</p>
+<p><img src="https://betterexplained.com/wp-content/uploads/git/git_branch_strategy.png" alt="img" /></p>
+<ul>
+<li>Have a mainline (master). Mentally it's on the far right.</li>
+<li>Create branches (master -&gt; dev) and subbranches (dev -&gt; featureX). The further from master, the crazier.</li>
+<li>Only merge with neighbors (master -&gt; dev -&gt; feature X, or featureX -&gt; dev -&gt; master)</li>
+</ul>
+<p>Stay sane by choosing a branch layout up front. I have a master tracking a svn project, and dev for my own code. In general, master is clean so I can branch anytime for one-off fixes.</p>
+<h2><a class="header" href="#understand-local-vs-remote" id="understand-local-vs-remote">Understand Local Vs. Remote</a></h2>
+<p>Git has local and remote commands; seeing both confused me (&quot;When do you checkout vs. pull?&quot;). Work locally, syncing remotely as needed.</p>
+<p><strong>Local data</strong></p>
+<ul>
+<li>
+<pre><code>git init
+</code></pre>
+<ul>
+<li>create local repo</li>
+<li>use git add/commit/branch to work locally</li>
+</ul>
+</li>
+</ul>
+<p><strong>Remote data</strong></p>
+<ul>
+<li>
+<pre><code>git remote add name path-to-repo
+</code></pre>
+<ul>
+<li>track a remote repo (usually &quot;origin&quot;) from an existing repo</li>
+<li>remote branches are &quot;origin/master&quot;, &quot;origin/dev&quot; etc.</li>
+</ul>
+</li>
+<li>
+<pre><code>git branch -a
+</code></pre>
+<ul>
+<li>list all branches (remote and local)</li>
+</ul>
+</li>
+<li>
+<pre><code>git clone path-to-repo
+</code></pre>
+<ul>
+<li>create a new local git repo copied from a remote one</li>
+<li>local master tracks remote master</li>
+</ul>
+</li>
+<li>
+<pre><code>git pull
+</code></pre>
+<ul>
+<li>merge changes from tracked remote branch (if in dev, pull from origin/dev)</li>
+</ul>
+</li>
+<li>
+<pre><code>git push
+</code></pre>
+<ul>
+<li>send changes to tracked remote branch (if in dev, push to origin/dev)</li>
+</ul>
+</li>
+</ul>
+<p><strong>Why local and remote?</strong> Subversion has central checkins, so you avoid committing unfinished work. With git, local commits are frequent and you only push when ready.</p>
+<h2><a class="header" href="#guids-are-good" id="guids-are-good">GUIDs Are GOOD</a></h2>
+<p>Git addresses information by a hash (<a href="https://betterexplained.com/articles/the-quick-guide-to-guids/">GUID</a>) of its contents. If two branches are the same, they have the same GUID (and vice versa).</p>
+<p>Why's this cool? We can create branches independently, merge them, and have a common GUID. No central numbering needed. Usually, we just compare the first few digits: &quot;Are you on a93?&quot;.</p>
+<h2><a class="header" href="#tips--tricks" id="tips--tricks">Tips &amp; Tricks</a></h2>
+<p>For your .gitconfig:</p>
+<pre><code>[alias]
+        ci = commit
+        st = status
+        co = checkout
+        oneline = log --pretty=oneline
+        br = branch
+        la = log --pretty=&quot;format:%ad %h (%an): %s&quot; --date=short
+</code></pre>
+<p>There are some GUI tools for git, but I prefer to learn via the command line. Git is opinionated software (which I like), and analogies help me understand its world view.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="7-Version_Control-II.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="9-Software_Versioning-I.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="7-Version_Control-II.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="9-Software_Versioning-I.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
