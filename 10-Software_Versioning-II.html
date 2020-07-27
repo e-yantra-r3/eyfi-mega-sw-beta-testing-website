@@ -89,7 +89,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="0-1-Welcome.html"><strong aria-hidden="true">1.</strong> Welcome</a></li><li class="chapter-item expanded "><a href="0-2-Announcements.html"><strong aria-hidden="true">2.</strong> Announcements</a></li><li class="chapter-item expanded "><a href="1-Software_Testing-I.html"><strong aria-hidden="true">3.</strong> Software Testing - I</a></li><li class="chapter-item expanded "><a href="2-Software_Testing-II.html"><strong aria-hidden="true">4.</strong> Software Testing  - II</a></li><li class="chapter-item expanded "><a href="3-Software_Testing-III.html"><strong aria-hidden="true">5.</strong> Software_Testing - III</a></li><li class="chapter-item expanded "><a href="4-Software_Testing-IV.html"><strong aria-hidden="true">6.</strong> Software_Testing - IV</a></li><li class="chapter-item expanded "><a href="5-Software_Testing-V.html"><strong aria-hidden="true">7.</strong> Software_Testing - V</a></li><li class="chapter-item expanded "><a href="6-Version_Control-I.html"><strong aria-hidden="true">8.</strong> Version_Control - I</a></li><li class="chapter-item expanded "><a href="7-Version_Control-II.html"><strong aria-hidden="true">9.</strong> Version_Control - II</a></li><li class="chapter-item expanded "><a href="8-Version_Control-III.html"><strong aria-hidden="true">10.</strong> Version_Control - III</a></li><li class="chapter-item expanded "><a href="9-Software_Versioning-I.html"><strong aria-hidden="true">11.</strong> Software_Versioning - I</a></li><li class="chapter-item expanded "><a href="10-Software_Versioning-II.html" class="active"><strong aria-hidden="true">12.</strong> Software Versioning - II</a></li><li class="chapter-item expanded "><a href="11-Beta_Testing_1.html"><strong aria-hidden="true">13.</strong> Beta-Testing 1 - Arduino IDE</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="0-1-Welcome.html"><strong aria-hidden="true">1.</strong> Welcome</a></li><li class="chapter-item expanded "><a href="0-2-Announcements.html"><strong aria-hidden="true">2.</strong> Announcements</a></li><li class="chapter-item expanded "><a href="1-Software_Testing-I.html"><strong aria-hidden="true">3.</strong> Software Testing - I</a></li><li class="chapter-item expanded "><a href="2-Software_Testing-II.html"><strong aria-hidden="true">4.</strong> Software Testing  - II</a></li><li class="chapter-item expanded "><a href="3-Software_Testing-III.html"><strong aria-hidden="true">5.</strong> Software Testing - III</a></li><li class="chapter-item expanded "><a href="4-Software_Testing-IV.html"><strong aria-hidden="true">6.</strong> Software Testing - IV</a></li><li class="chapter-item expanded "><a href="5-Software_Testing-V.html"><strong aria-hidden="true">7.</strong> Software Testing - V</a></li><li class="chapter-item expanded "><a href="6-Version_Control-I.html"><strong aria-hidden="true">8.</strong> Version Control - I</a></li><li class="chapter-item expanded "><a href="7-Version_Control-II.html"><strong aria-hidden="true">9.</strong> Version Control - II</a></li><li class="chapter-item expanded "><a href="8-Version_Control-III.html"><strong aria-hidden="true">10.</strong> Version Control - III</a></li><li class="chapter-item expanded "><a href="9-Software_Versioning-I.html"><strong aria-hidden="true">11.</strong> Software Versioning - I</a></li><li class="chapter-item expanded "><a href="10-Software_Versioning-II.html" class="active"><strong aria-hidden="true">12.</strong> Software Versioning - II</a></li><li class="chapter-item expanded "><a href="11-Beta_Testing_1.html"><strong aria-hidden="true">13.</strong> Beta-Testing 1 - Arduino IDE</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -155,7 +155,8 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#understanding-semantic-versioning-specification-a-beginners-guide-with-an-example" id="understanding-semantic-versioning-specification-a-beginners-guide-with-an-example">Understanding Semantic Versioning Specification: A Beginner’s Guide With an Example</a></h1>
+                        <h1><a class="header" href="#understanding-semantic-versioning-specification" id="understanding-semantic-versioning-specification">Understanding Semantic Versioning Specification</a></h1>
+<h2><a class="header" href="#a-beginners-guide-with-an-example" id="a-beginners-guide-with-an-example">A Beginner’s Guide With an Example</a></h2>
 <p><strong>Author:</strong> Bharghav Bachina, <a href="https://medium.com/bb-tutorials-and-thoughts/understanding-semantic-versioning-spec-635b87397eec">Medium.com</a></p>
 <p>In software management, we often change our code and all these changes need to be tracked. As our projects grow, all the dependencies of the projects increase as well. If you want to make changes to your project and move forward, you need to make sure all your dependencies works with your current changes as well. We can’t move forward if these dependencies are too tight or loosely defined. This is called dependency hell.</p>
 <p>In this post, we can see how we can avoid this dependency hell and manage these dependencies. Here are the topics I cover</p>
@@ -169,15 +170,11 @@
 <li><strong>Difference between tilde(~) and caret(^)</strong></li>
 <li><strong>Best Practices</strong></li>
 </ul>
-<p><a href="https://en.wikipedia.org/wiki/File:VersionNumbers.svg"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/VersionNumbers.svg/125px-VersionNumbers.svg.png" alt="Version number sequence" /></a></p>
-<h1><a class="header" href="#what-is-semantic-versioning" id="what-is-semantic-versioning"><strong>What is Semantic Versioning</strong></a></h1>
+<h1><a class="header" href="#what-is-semantic-versioning" id="what-is-semantic-versioning">What is Semantic Versioning</a></h1>
 <p>Semantic Versioning is introduced to avoid the dependency hell discussed above and to keep the javascript ecosystem healthy, reliable and secure. Every time we change our package, it is recommended to change the version in package.json.</p>
 <p>By following this semantic versioning spec, you let other developers know the extent of your changes and whoever depend on your code can change their code accordingly.</p>
-<p><img src="https://miro.medium.com/max/60/1*X0AvlnrTy5Vt2-cGiJCSvg.png?q=20" alt="Image for post" /></p>
 <p><img src="https://miro.medium.com/max/1194/1*X0AvlnrTy5Vt2-cGiJCSvg.png" alt="Image for post" /></p>
-<p><strong>semantic versioning</strong></p>
-<hr />
-<h1><a class="header" href="#basic-rules" id="basic-rules"><strong>Basic Rules</strong></a></h1>
+<h1><a class="header" href="#rules" id="rules">Rules</a></h1>
 <p>When you follow this semantic versioning spec, it is recommended to follow these basic rules.</p>
 <ul>
 <li>If you are starting a new project, start your project with version *<strong>0.1.0*</strong> and increment minor version for each release until its first production release.</li>
@@ -188,16 +185,14 @@
 <li>If your package is unstable, you should add a *<strong>LABEL*</strong> indicating that your package doesn’t meet with intended requirements. For instance, *<strong>1.0.0*</strong> becomes *<strong>1.0.0-beta*</strong> or *<strong>1.0..0-beta.1*</strong></li>
 <li>You can add build metadata to this version as well with the *<strong>+*</strong> appending at the end. For instance, *<strong>1.0.0-beta+1122*</strong></li>
 </ul>
-<hr />
-<h1><a class="header" href="#why-should-we-use-it" id="why-should-we-use-it"><strong>Why Should We Use It</strong></a></h1>
+<h1><a class="header" href="#why-should-we-use-it" id="why-should-we-use-it">Why Should We Use It</a></h1>
 <p>There are so many advantages to using this spec. Some of them are follows</p>
 <ul>
 <li>It’s easy to track the changes with versions.</li>
 <li>With version numbers, it’s easy to understand the changes with the new release.</li>
 <li>Developers will have the option of going back to the older version if the newer version doesn't work with their code.</li>
 </ul>
-<hr />
-<h1><a class="header" href="#example-project" id="example-project"><strong>Example Project</strong></a></h1>
+<h1><a class="header" href="#example-project" id="example-project">Example Project</a></h1>
 <p>Let’s put theory into practice by working on the example project.</p>
 <p>We have a module called NameUtils with two methods firstName and lastName which takes fullName and gives you first name and last name respectively.</p>
 <h2><a class="header" href="#first-release" id="first-release">First Release</a></h2>
@@ -237,27 +232,23 @@
 <p><img src="https://miro.medium.com/max/60/1*hVeH3ZLboMysWFtyrHnr5g.png?q=20" alt="Image for post" /></p>
 <p><img src="https://miro.medium.com/max/1120/1*hVeH3ZLboMysWFtyrHnr5g.png" alt="Image for post" /></p>
 <p><strong>npmutils 2.0.0</strong></p>
-<hr />
-<h1><a class="header" href="#version-history-and-precedence" id="version-history-and-precedence"><strong>Version History and Precedence</strong></a></h1>
+<h1><a class="header" href="#version-history-and-precedence" id="version-history-and-precedence">Version History and Precedence</a></h1>
 <p>We can check the version history in npm by going to versions tab like below and you can click on any version to see the details.</p>
 <p><img src="https://miro.medium.com/max/60/1*uWOEnjH9J6L5X_yWSgdS5A.png?q=20" alt="Image for post" /></p>
 <p><img src="https://miro.medium.com/max/1501/1*uWOEnjH9J6L5X_yWSgdS5A.png" alt="Image for post" /></p>
 <p><strong>package version history</strong></p>
 <p>Precedence refers to how these versions are compared based on the major, minor, patch and prerelease numbers. For instance, we have 4 versions for our package so our precedence order is *<strong>1.0.0 &lt; 1.0.1 &lt; 1.1.1 &lt; 2.0.0.*</strong></p>
-<hr />
-<h1><a class="header" href="#how-to-install-specific-versions" id="how-to-install-specific-versions"><strong>How to Install Specific Versions</strong></a></h1>
+<h1><a class="header" href="#how-to-install-specific-versions" id="how-to-install-specific-versions">How to Install Specific Versions</a></h1>
 <p>Now we have several versions of our package in npm registry and let’s understand how we can install specific versions and update those accordingly.</p>
 <p>If you install the package without any version specified, <code>npm i nameutils, </code>npm will install the latest version from the registry. In our case, it’s *<strong>2.0.0*</strong></p>
 <p>If you want to install a specific version, we can use <code>@</code> a symbol like this <code>npm i nameutils@1.1.1</code></p>
-<hr />
-<h1><a class="header" href="#difference-between-tilde-and-caret" id="difference-between-tilde-and-caret"><strong>Difference between tilde(~) and caret(^)</strong></a></h1>
+<h1><a class="header" href="#difference-between-tilde-and-caret" id="difference-between-tilde-and-caret">Difference between tilde(~) and caret(^)</a></h1>
 <p>package.json gets updated whenever you install any package with <code>--save.</code> Every time when you install or update dependencies, These symbols caret (^) and tilde(~) makes the difference with the versions we are installing.</p>
-<h1><a class="header" href="#" id=""><strong>~</strong></a></h1>
+<h1><a class="header" href="#" id="">~</a></h1>
 <p>For the specified minor version, ~ will match the most recent patch version. For instance, if you have <code>~1.3.4</code> in your package.json file and <code>1.3.6</code> and <code>1.4.0</code> are available in the npm registry <code>1.3.6</code> is installed and hold off with <code>1.4.0.</code></p>
 <h1><a class="header" href="#-1" id="-1">^</a></h1>
 <p>For the specified major version, ^ will match the most recent minor version. For instance, if you have <code>^2.2.0</code>in your package.json file and <code>2.3.0</code>and <code>3.0.0</code> are available in the npm registry <code>2.3.0</code>is installed and hold off with <code>3.0.0</code></p>
-<hr />
-<h1><a class="header" href="#best-practices" id="best-practices"><strong>Best Practices</strong></a></h1>
+<h1><a class="header" href="#best-practice" id="best-practice">Best Practice</a></h1>
 <ul>
 <li>Never change any contents of the already released version, always release the new version with changes</li>
 <li>If your package is still in unstable mode, better start with the version *<strong>0.x.y.*</strong> This facilitates rapid development.</li>
@@ -267,6 +258,7 @@
 <li>If you have deprecating changes, always put those in documentation to let the users know the changes.</li>
 <li>You can release a minor version as well with those deprecating changes in place. It facilitates a smooth transition.</li>
 </ul>
+<hr />
 
                     </main>
 
