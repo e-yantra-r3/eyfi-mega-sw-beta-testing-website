@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Software Testing  - II - eYFi-Mega Software Beta-Testing Program</title>
+        <title>Learn: Software Testing - I - eYFi-Mega Software Beta Testing Program</title>
         
         
 
@@ -13,12 +13,16 @@
 
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="Website for eYFi-Mega SW Beta-Testing">
+        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
+        
         <link rel="icon" href="favicon.svg">
+        
+        
         <link rel="shortcut icon" href="favicon.png">
+        
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -89,7 +93,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="0-1-Welcome.html"><strong aria-hidden="true">1.</strong> Welcome</a></li><li class="chapter-item expanded "><a href="0-2-Announcements.html"><strong aria-hidden="true">2.</strong> Announcements</a></li><li class="chapter-item expanded "><a href="1-Software_Testing-I.html"><strong aria-hidden="true">3.</strong> Software Testing - I</a></li><li class="chapter-item expanded "><a href="2-Software_Testing-II.html" class="active"><strong aria-hidden="true">4.</strong> Software Testing  - II</a></li><li class="chapter-item expanded "><a href="3-Software_Testing-III.html"><strong aria-hidden="true">5.</strong> Software_Testing - III</a></li><li class="chapter-item expanded "><a href="4-Software_Testing-IV.html"><strong aria-hidden="true">6.</strong> Software_Testing - IV</a></li><li class="chapter-item expanded "><a href="5-Software_Testing-V.html"><strong aria-hidden="true">7.</strong> Software_Testing - V</a></li><li class="chapter-item expanded "><a href="6-Version_Control-I.html"><strong aria-hidden="true">8.</strong> Version_Control - I</a></li><li class="chapter-item expanded "><a href="7-Version_Control-II.html"><strong aria-hidden="true">9.</strong> Version_Control - II</a></li><li class="chapter-item expanded "><a href="8-Version_Control-III.html"><strong aria-hidden="true">10.</strong> Version_Control - III</a></li><li class="chapter-item expanded "><a href="9-Software_Versioning-I.html"><strong aria-hidden="true">11.</strong> Software_Versioning - I</a></li><li class="chapter-item expanded "><a href="10-Software_Versioning-II.html"><strong aria-hidden="true">12.</strong> Software Versioning - II</a></li><li class="chapter-item expanded "><a href="11-Beta_Testing_1.html"><strong aria-hidden="true">13.</strong> Beta-Testing 1 - Arduino IDE</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="1-welcome.html"><strong aria-hidden="true">1.</strong> Welcome</a></li><li class="chapter-item expanded "><a href="2-bulletin-board.html"><strong aria-hidden="true">2.</strong> Bulletin Board</a></li><li class="chapter-item expanded "><a href="3-learn-sw-testing-1.html" class="active"><strong aria-hidden="true">3.</strong> Learn: Software Testing - I</a></li><li class="chapter-item expanded "><a href="4-learn-sw-testing-2.html"><strong aria-hidden="true">4.</strong> Learn: Software Testing - II</a></li><li class="chapter-item expanded "><a href="5-learn-sw-testing-3.html"><strong aria-hidden="true">5.</strong> Learn: Software Testing - III</a></li><li class="chapter-item expanded "><a href="6-learn-sw-testing-4.html"><strong aria-hidden="true">6.</strong> Learn: Software Testing - IV</a></li><li class="chapter-item expanded "><a href="7-learn-sw-testing-5.html"><strong aria-hidden="true">7.</strong> Learn: Software Testing - V</a></li><li class="chapter-item expanded "><a href="8-learn-version-control-1.html"><strong aria-hidden="true">8.</strong> Learn: Version Control - I</a></li><li class="chapter-item expanded "><a href="9-learn-version-control-2.html"><strong aria-hidden="true">9.</strong> Learn: Version Control - II</a></li><li class="chapter-item expanded "><a href="10-learn-version-control-3.html"><strong aria-hidden="true">10.</strong> Learn: Version Control - III</a></li><li class="chapter-item expanded "><a href="11-learn-software-versioning-1.html"><strong aria-hidden="true">11.</strong> Learn: Software Versioning - I</a></li><li class="chapter-item expanded "><a href="12-learn-software-versioning-2.html"><strong aria-hidden="true">12.</strong> Learn: Software Versioning - II</a></li><li class="chapter-item expanded "><a href="13-beta-testing-1-arduino-ide.html"><strong aria-hidden="true">13.</strong> Beta Testing I: Arduino IDE</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -121,7 +125,7 @@
                         
                     </div>
 
-                    <h1 class="menu-title">eYFi-Mega Software Beta-Testing Program</h1>
+                    <h1 class="menu-title">eYFi-Mega Software Beta Testing Program</h1>
 
                     <div class="right-buttons">
                         <a href="print.html" title="Print this book" aria-label="Print this book">
@@ -155,86 +159,74 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#types-of-software-testing" id="types-of-software-testing">Types of Software Testing</a></h1>
-<p><strong>Author:</strong> Kritka, GeeksforGeeks</p>
-<h3><a class="header" href="#introduction" id="introduction">Introduction</a></h3>
-<p>Testing is a process of executing a program with the aim of finding error. To make our software perform well it should be error free. If testing is done successfully it will remove all the errors from the software.</p>
-<h3><a class="header" href="#principles-of-testing" id="principles-of-testing">Principles of Testing</a></h3>
-<p>(i) All the test should meet the customer requirements </p>
-<p>(ii) To make our software testing should be performed by third party </p>
-<p>(iii) Exhaustive testing is not possible. As we need the optimal amount of testing based on the risk assessment of the application. (iv) All the test to be conducted should be planned before implementing it </p>
-<p>v) It follows pareto rule(80/20 rule) which states that 80% of errors comes from 20% of program components. </p>
-<p>(vi) Start testing with small parts and extend it to large parts.</p>
-<h3><a class="header" href="#types-of-testing" id="types-of-testing">Types of Testing</a></h3>
-<h3><a class="header" href="#1-unit-testing" id="1-unit-testing">1. Unit Testing</a></h3>
-<p>It focuses on smallest unit of software design. In this we test an individual unit or group of inter related <a href="http://units.It">units.It</a> is often done by programmer by using sample input and observing its corresponding outputs. Example:</p>
-<pre><code>a) In a program we are checking if loop, method or 
-   function is working fine
-b) Misunderstood or incorrect, arithmetic precedence.
-c) Incorrect initialization
-</code></pre>
-<h3><a class="header" href="#2-integration-testing" id="2-integration-testing">2. Integration Testing</a></h3>
-<p>The objective is to take unit tested components and build a program structure that has been dictated by design.Integration testing is testing in which a group of components are combined to produce output.</p>
-<p>Integration testing is of four types: (i) Top down (ii) Bottom up (iii) Sandwich (iv) Big-Bang Example</p>
-<pre><code>(a) Black Box testing:- It is used for validation. 
-In this we ignores internal working mechanism and 
-focuses on what is the output?.
-
-(b) White Box testing:- It is used for verification. 
-In this we focus on internal mechanism i.e.
-how the output is achieved?
-</code></pre>
-<h3><a class="header" href="#3-regression-testing" id="3-regression-testing">3. Regression Testing</a></h3>
-<p>Every time new module is added leads to changes in program. This type of testing make sure that whole component works properly even after adding components to the complete program. Example</p>
-<pre><code>In school record suppose we have module staff, students 
-and finance combining these modules and checking if on 
-integration these module works fine is regression testing
-</code></pre>
-<h3><a class="header" href="#4-smoke-testing" id="4-smoke-testing">4. Smoke Testing</a></h3>
-<p>This test is done to make sure that software under testing is ready or stable for further testing It is called smoke test as testing initial pass is done to check if it did not catch the fire or smoked in the initial switch on. Example:</p>
-<pre><code>If project has 2 modules so before going to module 
-make sure that module 1 works properly
-</code></pre>
-<h3><a class="header" href="#5-alpha-testing" id="5-alpha-testing">5. Alpha Testing</a></h3>
-<p>This is a type of validation testing. It is a type of  <em>acceptance testing</em> which is done before the product is released to customers. It is typically done by QA people. Example:</p>
-<pre><code>When software testing is performed internally within
-the organization
-</code></pre>
-<h3><a class="header" href="#6-beta-testing" id="6-beta-testing">6. Beta Testing</a></h3>
-<p>The beta test is conducted at one or more customer sites by the end-user of the software. This version is released for the limited number of users for testing in real time environment Example:</p>
-<pre><code>When software testing is performed for the limited
-number of people
-</code></pre>
-<h3><a class="header" href="#7-system-testing" id="7-system-testing">7. System Testing</a></h3>
-<p>In this software is tested such that it works fine for different operating system. It is covered under the black box testing technique. In this we just focus on required input and output without focusing on internal working. In this we have security testing, recovery testing , stress testing and performance testing Example:</p>
-<pre><code>This include functional as well as non functional 
-testing
-</code></pre>
-<h3><a class="header" href="#8-stress-testing" id="8-stress-testing">8. Stress Testing</a></h3>
-<p>In this we gives unfavorable conditions to the system and check how they perform in those condition. Example:</p>
-<pre><code>(a) Test cases that require maximum memory or other
-    resources are executed
-(b) Test cases that may cause thrashing in a virtual 
-    operating system
-(c) Test cases that may cause excessive disk requirement
-</code></pre>
-<h3><a class="header" href="#9-performance-testing" id="9-performance-testing">9. Performance Testing</a></h3>
-<p>It is designed to test the run-time performance of software within the context of an integrated system. It is used to test speed and effectiveness of program. Example:</p>
-<pre><code>Checking number of processor cycles.
-</code></pre>
+                        <style>
+.back{
+	position: fixed;
+	width: 300px;
+	height: 300px;
+	top: 50%;
+	left: 50%;
+    margin-top: auto; 
+    margin-left: auto; 
+	opacity: 0.15;
+	}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+</style>
+<img src="http://mooc.e-yantra.org/img/eYantra_logo.svg" alt="Paris" class="center">
+<img src="http://mooc.e-yantra.org/img/EyantraLogoMini.png" class="back">
+<h1><a class="header" href="#introduction-to-software-testing" id="introduction-to-software-testing">Introduction to Software Testing</a></h1>
+<p><strong>Author:</strong>  <strong><a href="https://www.linkedin.com/in/aditya-gupta-437504a7?trk=hp-identity-name">Aditya Gupta</a></strong>, GeeksforGeeks</p>
+<p><strong>Definition</strong>: The process or method of finding error/s in a software application or program so that the application functions  according to the end user's requirement is called software testing.</p>
+<p>So, it's basically a process of verifying and validating that a  software or application is bug free, meets the technical requirements as guided by it’s design and development and meets the user requirements  effectively and efficiently with handling all the exceptional and  boundary cases.</p>
+<p>The process of software testing aims not only at finding faults in  the existing software but also at finding measures to improve the  software in terms of efficiency, accuracy and usability. It mainly aims  at measuring specification, functionality and performance of a software  program or application.</p>
+<p><strong>Software testing can be divided into two steps:</strong></p>
+<ol>
+<li><strong>Verification:</strong> it refers to the set of tasks that ensure that software correctly implements a specific function.</li>
+<li><strong>Validation:</strong> it refers to a different set of tasks that ensure that the software that has been built is traceable to customer requirements.</li>
+</ol>
+<p><strong>Verification:</strong> “Are we building the product right?”</p>
+<p><strong>Validation:</strong>  “Are we building the right product?”</p>
+<p><strong>What are different types of software testing?</strong></p>
+<p>Software Testing can be broadly classified into two types:</p>
+<p><strong>Manual Testing:</strong> Manual testing includes testing a  software manually, i.e., without using any automated tool or any script. In this type, the tester takes over the role of an end-user and tests  the software to identify any unexpected behavior or bug. There are  different stages for manual testing such as unit testing, integration  testing, system testing, and user acceptance testing.</p>
+<p>Testers use test plans, test cases, or test scenarios to test a  software to ensure the completeness of testing. Manual testing also  includes exploratory testing, as testers explore the software to  identify errors in it.</p>
+<p><strong>Automation Testing:</strong> Automation testing, which is  also known as Test Automation, is when the tester writes scripts and  uses another software to test the product. This process involves  automation of a manual process. Automation Testing is used to re-run the test scenarios that were performed manually, quickly, and repeatedly.</p>
+<p>Apart from regression testing, automation testing is also used to  test the application from load, performance, and stress point of view.  It increases the test coverage, improves accuracy, and saves time and  money in comparison to manual testing.</p>
+<p><strong>What are different techniques of Software Testing?</strong></p>
+<p>Software techniques can be majorly classified into two categories:</p>
+<ol>
+<li><strong>Black Box Testing:</strong> The technique of testing in  which the tester doesn’t have access to the source code of the software  and is conducted at the software interface without concerning with the  internal logical structure of the software is known as black box  testing.</li>
+<li><strong>White-Box Testing:</strong> The technique of testing in  which the tester is aware of the internal workings of the product, have  access to it’s source code and is conducted by making sure that all  internal operations are performed according to the specifications is  known as white box testing.</li>
+</ol>
+<p><strong>What are different levels of software testing?</strong></p>
+<p>Software level testing can be majorly classified into 4 levels:</p>
+<ol>
+<li><strong>Unit Testing:</strong> A level of the software testing  process where individual units/components of a software/system are  tested. The purpose is to validate that each unit of the software  performs as designed.</li>
+<li><strong>Integration Testing:</strong> A level of the software  testing process where individual units are combined and tested as a  group. The purpose of this level of testing is to expose faults in the  interaction between integrated units.</li>
+<li><strong>System Testing:</strong> A level of the software testing  process where a complete, integrated system/software is tested. The  purpose of this test is to evaluate the system’s compliance with the  specified requirements.</li>
+<li><strong>Acceptance Testing:</strong> A level of the software testing process where a system is tested for acceptability. The purpose of this test is to evaluate the system’s compliance with the business  requirements and assess whether it is acceptable for delivery.</li>
+</ol>
+<p><img src="https://media.geeksforgeeks.org/wp-content/uploads/Software-Testing-Diagram.png" alt="https://media.geeksforgeeks.org/wp-content/uploads/Software-Testing-Diagram.png" /></p>
+<p>Note: Software testing is a very broad and vast topic and is  considered to be an integral and very important part of software  development and hence should be given it’s due importance.</p>
+<hr />
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="1-Software_Testing-I.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="2-bulletin-board.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="3-Software_Testing-III.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="4-learn-sw-testing-2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -246,13 +238,13 @@ testing
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="1-Software_Testing-I.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="2-bulletin-board.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="3-Software_Testing-III.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="4-learn-sw-testing-2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
